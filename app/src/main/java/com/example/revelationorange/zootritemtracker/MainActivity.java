@@ -3,11 +3,14 @@ package com.example.revelationorange.zootritemtracker;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -24,13 +27,12 @@ public class MainActivity extends AppCompatActivity {
     private JSONObject iconDict = new JSONObject();
     private final int iconWidth = 160, iconHeight = 160;
     private final float MARKED_ALPHA = 1, UNMARKED_ALPHA = (float) 0.4;
-    private final String KEY_STATE_DICT = "icon_state_dict";
-    private final String KEY_SETUP = "setup";
     private static final String SHARED_PREFS = "shared_preferences";
 
     private static int idStart = 100;
     private static int idCounter = idStart;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         iconIds.add(new Integer[]{R.drawable.zora_tunic, R.drawable.zora_tunic});
         iconIds.add(new Integer[]{R.drawable.bottle0, R.drawable.bottle1, R.drawable.bottle2, R.drawable.bottle3, R.drawable.bottle4});
         iconIds.add(new Integer[]{R.drawable.rutos_letter, R.drawable.rutos_letter});
-        iconIds.add(new Integer[]{R.drawable.silver_scale, R.drawable.silver_scale, R.drawable.gold_scale});
+        iconIds.add(new Integer[]{R.drawable.silver_scale, R.drawable.silver_scale, R.drawable.gold_scale}); // 30
         iconIds.add(new Integer[]{R.drawable.iron_boots, R.drawable.iron_boots});
         iconIds.add(new Integer[]{R.drawable.hover_boots, R.drawable.hover_boots});
         iconIds.add(new Integer[]{R.drawable.zeldas_lullaby, R.drawable.zeldas_lullaby});
@@ -89,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         iconIds.add(new Integer[]{R.drawable.stone_of_agony, R.drawable.stone_of_agony});
         iconIds.add(new Integer[]{R.drawable.minuet_of_forest, R.drawable.minuet_of_forest});
         iconIds.add(new Integer[]{R.drawable.bolero_of_fire, R.drawable.bolero_of_fire});
-        iconIds.add(new Integer[]{R.drawable.serenade_of_water, R.drawable.serenade_of_water});
+        iconIds.add(new Integer[]{R.drawable.serenade_of_water, R.drawable.serenade_of_water}); // 45
         iconIds.add(new Integer[]{R.drawable.requiem_of_spirit, R.drawable.requiem_of_spirit});
         iconIds.add(new Integer[]{R.drawable.nocturne_of_shadow, R.drawable.nocturne_of_shadow});
         iconIds.add(new Integer[]{R.drawable.prelude_of_light, R.drawable.prelude_of_light});
@@ -101,7 +103,20 @@ public class MainActivity extends AppCompatActivity {
         iconIds.add(new Integer[]{R.drawable.light_medallion, R.drawable.light_medallion});
         iconIds.add(new Integer[]{R.drawable.kokiri_emerald, R.drawable.kokiri_emerald});
         iconIds.add(new Integer[]{R.drawable.gorons_ruby, R.drawable.gorons_ruby});
-        iconIds.add(new Integer[]{R.drawable.zoras_sapphire, R.drawable.zoras_sapphire});
+        iconIds.add(new Integer[]{R.drawable.zoras_sapphire, R.drawable.zoras_sapphire}); // 57
+        Integer[] medalTrackers = new Integer[]{R.drawable.qmark, R.drawable.kokiri_emerald, R.drawable.gorons_ruby,
+                R.drawable.zoras_sapphire, R.drawable.forest_medallion, R.drawable.fire_medallion,
+                R.drawable.water_medallion, R.drawable.spirit_medallion, R.drawable.shadow_medallion,
+                R.drawable.light_medallion};
+        iconIds.add(medalTrackers);
+        iconIds.add(medalTrackers);
+        iconIds.add(medalTrackers);
+        iconIds.add(medalTrackers);
+        iconIds.add(medalTrackers);
+        iconIds.add(medalTrackers);
+        iconIds.add(medalTrackers);
+        iconIds.add(medalTrackers);
+        iconIds.add(medalTrackers);
 
         for (int i = 0; i < iconIds.size(); i++) {
             JSONObject iconInfo = new JSONObject();
@@ -161,9 +176,55 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             cset.applyTo(trackerPanel);
+
+            if (iconIds.size()-i < 10) {
+                ImageButton bOver = makeImgButton(this);
+                bOver.setMinimumWidth(160);
+                int bheight = 20;
+                bOver.setMinimumHeight(bheight);
+                bOver.setMaxHeight(bheight);
+                bOver.setOnClickListener(cycleIcons(b, i));
+                switch (iconIds.size()-i) {
+                    case 9:
+                        bOver.setBackgroundResource(R.drawable.frst);
+                        break;
+                    case 8:
+                        bOver.setBackgroundResource(R.drawable.fire);
+                        break;
+                    case 7:
+                        bOver.setBackgroundResource(R.drawable.watr);
+                        break;
+                    case 6:
+                        bOver.setBackgroundResource(R.drawable.sprt);
+                        break;
+                    case 5:
+                        bOver.setBackgroundResource(R.drawable.shdw);
+                        break;
+                    case 4:
+                        bOver.setBackgroundResource(R.drawable.free);
+                        break;
+                    case 3:
+                        bOver.setBackgroundResource(R.drawable.deku);
+                        break;
+                    case 2:
+                        bOver.setBackgroundResource(R.drawable.dcvn);
+                        break;
+                    case 1:
+                        bOver.setBackgroundResource(R.drawable.jabu);
+                        break;
+                }
+                trackerPanel.addView(bOver);
+                cset.clone(trackerPanel);
+                cset.connect(bOver.getId(), ConstraintSet.BOTTOM, b.getId(), ConstraintSet.BOTTOM);
+                cset.connect(bOver.getId(), ConstraintSet.LEFT, b.getId(), ConstraintSet.LEFT);
+                cset.applyTo(trackerPanel);
+            }
+
             allButtons.add(b);
             prevButton = b;
         }
+        ImageButton ib = allButtons.get(allButtons.size()-1);
+        ib.setForegroundGravity(Gravity.BOTTOM);
     }
 
     public void reset(View v) {
