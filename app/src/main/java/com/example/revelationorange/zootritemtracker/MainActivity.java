@@ -37,12 +37,13 @@ public class MainActivity extends AppCompatActivity {
 
         sp = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
 
-        // that way more icons can be added, plus reset button, and whatever else is needed
-        // (icons such as what dungeon holds what medallion/stone)
+        /*
+        dunno if I'm supposed to credit where I got the icons from, but:
+        icon credit goes to testrunner's OoT map tracker
+        just grabbed the icon files from that
+        they're good icons
+        */
 
-        iconIds.add(new Integer[]{R.drawable.deku_stick0, R.drawable.deku_stick1, R.drawable.deku_stick2, R.drawable.deku_stick3});
-        iconIds.add(new Integer[]{R.drawable.deku_nut0, R.drawable.deku_nut1, R.drawable.deku_nut2, R.drawable.deku_nut3});
-        iconIds.add(new Integer[]{R.drawable.bomb0, R.drawable.bomb1, R.drawable.bomb2, R.drawable.bomb3});
         iconIds.add(new Integer[]{R.drawable.bow0, R.drawable.bow1, R.drawable.bow2, R.drawable.bow3});
         iconIds.add(new Integer[]{R.drawable.fire_arrow, R.drawable.fire_arrow});
         iconIds.add(new Integer[]{R.drawable.ice_arrow, R.drawable.ice_arrow});
@@ -50,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
         iconIds.add(new Integer[]{R.drawable.dins_fire, R.drawable.dins_fire});
         iconIds.add(new Integer[]{R.drawable.farores_wind, R.drawable.farores_wind});
         iconIds.add(new Integer[]{R.drawable.nayrus_love, R.drawable.nayrus_love});
+        iconIds.add(new Integer[]{R.drawable.bomb0, R.drawable.bomb1, R.drawable.bomb2, R.drawable.bomb3});
+        iconIds.add(new Integer[]{R.drawable.deku_stick0, R.drawable.deku_stick1, R.drawable.deku_stick2, R.drawable.deku_stick3});
+        iconIds.add(new Integer[]{R.drawable.deku_nut0, R.drawable.deku_nut1, R.drawable.deku_nut2, R.drawable.deku_nut3});
         iconIds.add(new Integer[]{R.drawable.kokiri_sword, R.drawable.kokiri_sword});
         iconIds.add(new Integer[]{R.drawable.master_sword, R.drawable.master_sword});
         iconIds.add(new Integer[]{R.drawable.biggorons_sword, R.drawable.biggorons_sword});
