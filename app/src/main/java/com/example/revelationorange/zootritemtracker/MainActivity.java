@@ -160,7 +160,8 @@ public class MainActivity extends AppCompatActivity {
             trackerPanel.addView(b);
             cset.clone(trackerPanel);
             if (prevButton == null) {
-                cset.connect(b.getId(), ConstraintSet.TOP, trackerPanel.getId(), ConstraintSet.TOP);
+                ImageButton rb = findViewById(R.id.resetButton);
+                cset.connect(b.getId(), ConstraintSet.TOP, rb.getId(), ConstraintSet.BOTTOM, 16*3);
                 cset.connect(b.getId(), ConstraintSet.LEFT, trackerPanel.getId(), ConstraintSet.LEFT, actualPad);
             }
             else {
