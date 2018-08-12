@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private ConstraintLayout trackerPanel;
     private SharedPreferences sp;
     private ArrayList<Integer[]> iconIds = new ArrayList<>();
+    private ArrayList<ImageButton> allButtons = new ArrayList<>();
     private JSONObject iconDict = new JSONObject();
     private final int iconWidth = 160, iconHeight = 160;
     private final float MARKED_ALPHA = 1, UNMARKED_ALPHA = (float) 0.4;
@@ -85,13 +86,13 @@ public class MainActivity extends AppCompatActivity {
         iconIds.add(new Integer[]{R.drawable.wallet0, R.drawable.wallet1, R.drawable.wallet2});
         iconIds.add(new Integer[]{R.drawable.magic, R.drawable.magic, R.drawable.more_magic});
         iconIds.add(new Integer[]{R.drawable.skulltula0, R.drawable.skulltula1, R.drawable.skulltula2, R.drawable.skulltula3, R.drawable.skulltula4, R.drawable.skulltula5});
+        iconIds.add(new Integer[]{R.drawable.stone_of_agony, R.drawable.stone_of_agony});
         iconIds.add(new Integer[]{R.drawable.minuet_of_forest, R.drawable.minuet_of_forest});
         iconIds.add(new Integer[]{R.drawable.bolero_of_fire, R.drawable.bolero_of_fire});
         iconIds.add(new Integer[]{R.drawable.serenade_of_water, R.drawable.serenade_of_water});
         iconIds.add(new Integer[]{R.drawable.requiem_of_spirit, R.drawable.requiem_of_spirit});
         iconIds.add(new Integer[]{R.drawable.nocturne_of_shadow, R.drawable.nocturne_of_shadow});
         iconIds.add(new Integer[]{R.drawable.prelude_of_light, R.drawable.prelude_of_light});
-        iconIds.add(new Integer[]{R.drawable.stone_of_agony, R.drawable.stone_of_agony});
         iconIds.add(new Integer[]{R.drawable.forest_medallion, R.drawable.forest_medallion});
         iconIds.add(new Integer[]{R.drawable.fire_medallion, R.drawable.fire_medallion});
         iconIds.add(new Integer[]{R.drawable.water_medallion, R.drawable.water_medallion});
@@ -160,7 +161,22 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             cset.applyTo(trackerPanel);
+            allButtons.add(b);
             prevButton = b;
+        }
+    }
+
+    public void reset(View v) {
+        for (int i = 0; i < allButtons.size(); i++) {
+            ImageButton b = allButtons.get(i);
+            b.setAlpha(UNMARKED_ALPHA);
+            b.setBackgroundResource(iconIds.get(i)[0]);
+            try {
+                iconDict.getJSONObject(Integer.toString(i)).put("state", 0);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            sp.edit().putInt(Integer.toString(i), 0).apply();
         }
     }
 
