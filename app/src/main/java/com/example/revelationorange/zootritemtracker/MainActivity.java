@@ -36,73 +36,70 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        iconIds.add(new Integer[]{R.drawable.deku_stick});
-        iconIds.add(new Integer[]{R.drawable.deku_nut});
-        iconIds.add(new Integer[]{R.drawable.bomb});
-        iconIds.add(new Integer[]{R.drawable.bow});
-        iconIds.add(new Integer[]{R.drawable.fire_arrow});
-        iconIds.add(new Integer[]{R.drawable.ice_arrow});
-        iconIds.add(new Integer[]{R.drawable.light_arrow});
-        iconIds.add(new Integer[]{R.drawable.dins_fire});
-        iconIds.add(new Integer[]{R.drawable.farores_wind});
-        iconIds.add(new Integer[]{R.drawable.nayrus_love});
-        iconIds.add(new Integer[]{R.drawable.kokiri_sword});
-        iconIds.add(new Integer[]{R.drawable.master_sword});
-        iconIds.add(new Integer[]{R.drawable.biggorons_sword});
-        iconIds.add(new Integer[]{R.drawable.slingshot});
-        iconIds.add(new Integer[]{R.drawable.fairy_ocarina, R.drawable.ocarina_of_time});
-        iconIds.add(new Integer[]{R.drawable.bombchu});
-        iconIds.add(new Integer[]{R.drawable.hookshot, R.drawable.longshot});
-        iconIds.add(new Integer[]{R.drawable.deku_shield});
-        iconIds.add(new Integer[]{R.drawable.hylian_shield});
-        iconIds.add(new Integer[]{R.drawable.mirror_shield});
-        iconIds.add(new Integer[]{R.drawable.boomerang});
-        iconIds.add(new Integer[]{R.drawable.lens});
-        iconIds.add(new Integer[]{R.drawable.magic_beans});
-        iconIds.add(new Integer[]{R.drawable.hammer});
-        iconIds.add(new Integer[]{R.drawable.goron_bracelet, R.drawable.silver_gauntlets, R.drawable.golden_gauntlets});
-        iconIds.add(new Integer[]{R.drawable.goron_tunic});
-        iconIds.add(new Integer[]{R.drawable.zora_tunic});
-        iconIds.add(new Integer[]{R.drawable.empty_bottle});
-        iconIds.add(new Integer[]{R.drawable.empty_bottle});
-        iconIds.add(new Integer[]{R.drawable.empty_bottle});
-        iconIds.add(new Integer[]{R.drawable.empty_bottle});
-        iconIds.add(new Integer[]{R.drawable.rutos_letter});
-        iconIds.add(new Integer[]{R.drawable.silver_scale, R.drawable.gold_scale});
-        iconIds.add(new Integer[]{R.drawable.iron_boots});
-        iconIds.add(new Integer[]{R.drawable.hover_boots});
-        iconIds.add(new Integer[]{R.drawable.gray_note});
-        iconIds.add(new Integer[]{R.drawable.gray_note});
-        iconIds.add(new Integer[]{R.drawable.gray_note});
-        iconIds.add(new Integer[]{R.drawable.gray_note});
-        iconIds.add(new Integer[]{R.drawable.gray_note});
-        iconIds.add(new Integer[]{R.drawable.gray_note});
-        iconIds.add(new Integer[]{R.drawable.adults_wallet, R.drawable.giants_wallet});
-        iconIds.add(new Integer[]{R.drawable.magic, R.drawable.more_magic});
-        iconIds.add(new Integer[]{R.drawable.gold_skulltula});
-        iconIds.add(new Integer[]{R.drawable.minuet_of_forest});
-        iconIds.add(new Integer[]{R.drawable.bolero_of_fire});
-        iconIds.add(new Integer[]{R.drawable.serenade_of_water});
-        iconIds.add(new Integer[]{R.drawable.requiem_of_spirit});
-        iconIds.add(new Integer[]{R.drawable.nocturne_of_shadow});
-        iconIds.add(new Integer[]{R.drawable.prelude_of_light});
-        iconIds.add(new Integer[]{R.drawable.stone_of_agony});
-        iconIds.add(new Integer[]{R.drawable.forest_medallion});
-        iconIds.add(new Integer[]{R.drawable.fire_medallion});
-        iconIds.add(new Integer[]{R.drawable.water_medallion});
-        iconIds.add(new Integer[]{R.drawable.spirit_medallion});
-        iconIds.add(new Integer[]{R.drawable.shadow_medallion});
-        iconIds.add(new Integer[]{R.drawable.light_medallion});
-        iconIds.add(new Integer[]{R.drawable.kokiri_emerald});
-        iconIds.add(new Integer[]{R.drawable.gorons_ruby});
-        iconIds.add(new Integer[]{R.drawable.zoras_sapphire});
+        iconIds.add(new Integer[]{R.drawable.deku_stick0, R.drawable.deku_stick1, R.drawable.deku_stick2, R.drawable.deku_stick3});
+        iconIds.add(new Integer[]{R.drawable.deku_nut0, R.drawable.deku_nut1, R.drawable.deku_nut2, R.drawable.deku_nut3});
+        iconIds.add(new Integer[]{R.drawable.bomb0, R.drawable.bomb1, R.drawable.bomb2, R.drawable.bomb3});
+        iconIds.add(new Integer[]{R.drawable.bow0, R.drawable.bow1, R.drawable.bow2, R.drawable.bow3});
+        iconIds.add(new Integer[]{R.drawable.fire_arrow, R.drawable.fire_arrow});
+        iconIds.add(new Integer[]{R.drawable.ice_arrow, R.drawable.ice_arrow});
+        iconIds.add(new Integer[]{R.drawable.light_arrow, R.drawable.light_arrow});
+        iconIds.add(new Integer[]{R.drawable.dins_fire, R.drawable.dins_fire});
+        iconIds.add(new Integer[]{R.drawable.farores_wind, R.drawable.farores_wind});
+        iconIds.add(new Integer[]{R.drawable.nayrus_love, R.drawable.nayrus_love});
+        iconIds.add(new Integer[]{R.drawable.kokiri_sword, R.drawable.kokiri_sword});
+        iconIds.add(new Integer[]{R.drawable.master_sword, R.drawable.master_sword});
+        iconIds.add(new Integer[]{R.drawable.biggorons_sword, R.drawable.biggorons_sword});
+        iconIds.add(new Integer[]{R.drawable.slingshot0, R.drawable.slingshot1, R.drawable.slingshot2, R.drawable.slingshot3});
+        iconIds.add(new Integer[]{R.drawable.fairy_ocarina, R.drawable.fairy_ocarina, R.drawable.ocarina_of_time});
+        iconIds.add(new Integer[]{R.drawable.bombchu, R.drawable.bombchu});
+        iconIds.add(new Integer[]{R.drawable.hookshot, R.drawable.hookshot, R.drawable.longshot});
+        iconIds.add(new Integer[]{R.drawable.deku_shield, R.drawable.deku_shield});
+        iconIds.add(new Integer[]{R.drawable.hylian_shield, R.drawable.hylian_shield});
+        iconIds.add(new Integer[]{R.drawable.mirror_shield, R.drawable.mirror_shield});
+        iconIds.add(new Integer[]{R.drawable.boomerang, R.drawable.boomerang});
+        iconIds.add(new Integer[]{R.drawable.lens, R.drawable.lens});
+        iconIds.add(new Integer[]{R.drawable.magic_beans, R.drawable.magic_beans});
+        iconIds.add(new Integer[]{R.drawable.hammer, R.drawable.hammer});
+        iconIds.add(new Integer[]{R.drawable.strength0, R.drawable.strength1, R.drawable.strength2, R.drawable.strength3});
+        iconIds.add(new Integer[]{R.drawable.goron_tunic, R.drawable.goron_tunic});
+        iconIds.add(new Integer[]{R.drawable.zora_tunic, R.drawable.zora_tunic});
+        iconIds.add(new Integer[]{R.drawable.bottle0, R.drawable.bottle1, R.drawable.bottle2, R.drawable.bottle3, R.drawable.bottle4});
+        iconIds.add(new Integer[]{R.drawable.rutos_letter, R.drawable.rutos_letter});
+        iconIds.add(new Integer[]{R.drawable.silver_scale, R.drawable.silver_scale, R.drawable.gold_scale});
+        iconIds.add(new Integer[]{R.drawable.iron_boots, R.drawable.iron_boots});
+        iconIds.add(new Integer[]{R.drawable.hover_boots, R.drawable.hover_boots});
+        iconIds.add(new Integer[]{R.drawable.zeldas_lullaby, R.drawable.zeldas_lullaby});
+        iconIds.add(new Integer[]{R.drawable.eponas_song, R.drawable.eponas_song});
+        iconIds.add(new Integer[]{R.drawable.sarias_song, R.drawable.sarias_song});
+        iconIds.add(new Integer[]{R.drawable.suns_song, R.drawable.suns_song});
+        iconIds.add(new Integer[]{R.drawable.song_of_time, R.drawable.song_of_time});
+        iconIds.add(new Integer[]{R.drawable.song_of_storms, R.drawable.song_of_storms});
+        iconIds.add(new Integer[]{R.drawable.wallet0, R.drawable.wallet1, R.drawable.wallet2});
+        iconIds.add(new Integer[]{R.drawable.magic, R.drawable.magic, R.drawable.more_magic});
+        iconIds.add(new Integer[]{R.drawable.skulltula0, R.drawable.skulltula1, R.drawable.skulltula2, R.drawable.skulltula3, R.drawable.skulltula4, R.drawable.skulltula5});
+        iconIds.add(new Integer[]{R.drawable.minuet_of_forest, R.drawable.minuet_of_forest});
+        iconIds.add(new Integer[]{R.drawable.bolero_of_fire, R.drawable.bolero_of_fire});
+        iconIds.add(new Integer[]{R.drawable.serenade_of_water, R.drawable.serenade_of_water});
+        iconIds.add(new Integer[]{R.drawable.requiem_of_spirit, R.drawable.requiem_of_spirit});
+        iconIds.add(new Integer[]{R.drawable.nocturne_of_shadow, R.drawable.nocturne_of_shadow});
+        iconIds.add(new Integer[]{R.drawable.prelude_of_light, R.drawable.prelude_of_light});
+        iconIds.add(new Integer[]{R.drawable.stone_of_agony, R.drawable.stone_of_agony});
+        iconIds.add(new Integer[]{R.drawable.kokiri_emerald, R.drawable.kokiri_emerald});
+        iconIds.add(new Integer[]{R.drawable.gorons_ruby, R.drawable.gorons_ruby});
+        iconIds.add(new Integer[]{R.drawable.zoras_sapphire, R.drawable.zoras_sapphire});
+        iconIds.add(new Integer[]{R.drawable.forest_medallion, R.drawable.forest_medallion});
+        iconIds.add(new Integer[]{R.drawable.fire_medallion, R.drawable.fire_medallion});
+        iconIds.add(new Integer[]{R.drawable.water_medallion, R.drawable.water_medallion});
+        iconIds.add(new Integer[]{R.drawable.spirit_medallion, R.drawable.spirit_medallion});
+        iconIds.add(new Integer[]{R.drawable.shadow_medallion, R.drawable.shadow_medallion});
+        iconIds.add(new Integer[]{R.drawable.light_medallion, R.drawable.light_medallion});
 
         for (int i = 0; i < iconIds.size(); i++) {
             JSONObject iconInfo = new JSONObject();
             try {
 //                iconInfo.put("iconList", Arrays.asList(iconIds.get(i)));
                 iconInfo.put("maxState", iconIds.get(i).length-1);
-                iconInfo.put("state", -1);
+                iconInfo.put("state", 0);
                 iconDict.put(Integer.toString(i), iconInfo);
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -161,20 +158,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    if (iconDict.getJSONObject(Integer.toString(index)).getInt("state") == -1) {
-                        iconDict.getJSONObject(Integer.toString(index)).put("state", 0);
-                        b.setAlpha(MARKED_ALPHA);
-                    }
-                    else if (iconDict.getJSONObject(Integer.toString(index)).getInt("state") ==
-                            iconDict.getJSONObject(Integer.toString(index)).getInt("maxState")) {
-                        iconDict.getJSONObject(Integer.toString(index)).put("state", -1);
-                        b.setBackgroundResource(iconIds.get(index)[0]);
+                    int state = iconDict.getJSONObject(Integer.toString(index)).getInt("state");
+                    int maxState = iconDict.getJSONObject(Integer.toString(index)).getInt("maxState");
+                    if (state == maxState) {
                         b.setAlpha(UNMARKED_ALPHA);
+                        b.setBackgroundResource(iconIds.get(index)[0]);
+                        iconDict.getJSONObject(Integer.toString(index)).put("state", 0);
                     }
                     else {
-                        int st = iconDict.getJSONObject(Integer.toString(index)).getInt("state");
-                        iconDict.getJSONObject(Integer.toString(index)).put("state", st+1);
-                        b.setBackgroundResource(iconIds.get(index)[st+1]);
+                        b.setAlpha(MARKED_ALPHA);
+                        state++;
+                        b.setBackgroundResource(iconIds.get(index)[state]);
+                        iconDict.getJSONObject(Integer.toString(index)).put("state", state);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
