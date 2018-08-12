@@ -37,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
 
         sp = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
 
+        // that way more icons can be added, plus reset button, and whatever else is needed
+        // (icons such as what dungeon holds what medallion/stone)
+
         iconIds.add(new Integer[]{R.drawable.deku_stick0, R.drawable.deku_stick1, R.drawable.deku_stick2, R.drawable.deku_stick3});
         iconIds.add(new Integer[]{R.drawable.deku_nut0, R.drawable.deku_nut1, R.drawable.deku_nut2, R.drawable.deku_nut3});
         iconIds.add(new Integer[]{R.drawable.bomb0, R.drawable.bomb1, R.drawable.bomb2, R.drawable.bomb3});
@@ -115,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
         actualPad *= 0.75;
 
         trackerPanel = findViewById(R.id.trackerLayout);
-        trackerPanel.setBackgroundColor(Color.parseColor("#646464"));
+        findViewById(R.id.mainLayout).setBackgroundColor(Color.parseColor("#646464"));
 //        trackerPanel.setBackground(getResources().getDrawable(R.mipmap.ic_launcher));
         ConstraintSet cset = new ConstraintSet();
         ImageButton prevButton = null;
