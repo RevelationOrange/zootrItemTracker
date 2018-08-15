@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         icon credit goes to testrunner's OoT map tracker
         just grabbed the icon files from that
         they're good icons
+        also the FRST and stuff, those images I just screenshotted from emotracker
+        from Hamsda's package "OoT Randomizer - Map and Item Tracker"
         */
 
         iconIds.add(new Integer[]{R.drawable.bow0, R.drawable.bow1, R.drawable.bow2, R.drawable.bow3});
@@ -153,9 +155,10 @@ public class MainActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            b.setMinimumHeight(160);
-            b.setMinimumWidth(160);
+            b.setMinimumHeight(iconHeight);
+            b.setMinimumWidth(iconWidth);
             b.setOnClickListener(cycleIcons(b, i));
+            b.setOnLongClickListener(resetIcon(b, i));
 
             trackerPanel.addView(b);
             cset.clone(trackerPanel);
@@ -180,11 +183,12 @@ public class MainActivity extends AppCompatActivity {
 
             if (iconIds.size()-i < 10) {
                 ImageButton bOver = makeImgButton(this);
-                bOver.setMinimumWidth(160);
+                bOver.setMinimumWidth(iconWidth);
                 int bheight = 20;
                 bOver.setMinimumHeight(bheight);
                 bOver.setMaxHeight(bheight);
                 bOver.setOnClickListener(cycleIcons(b, i));
+                bOver.setOnLongClickListener(resetIcon(b, i));
                 switch (iconIds.size()-i) {
                     case 9:
                         bOver.setBackgroundResource(R.drawable.frst);
@@ -265,6 +269,23 @@ public class MainActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+            }
+        };
+    }
+
+    View.OnLongClickListener resetIcon(final ImageButton b, final int index) {
+        return new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                try {
+                    b.setAlpha(UNMARKED_ALPHA);
+                    b.setBackgroundResource(iconIds.get(index)[0]);
+                    iconDict.getJSONObject(Integer.toString(index)).put("state", 0);
+                    sp.edit().putInt(Integer.toString(index), 0).apply();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                return true;
             }
         };
     }
